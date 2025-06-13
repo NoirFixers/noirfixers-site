@@ -4,88 +4,145 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Noir Fixers | Elite Crisis Event Fixers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-dark: #111;
+      --text-light: #f5f5f5;
+      --accent-gold: #c9a66b;
+      --font-serif: 'Playfair Display', serif;
+      --font-sans: 'Montserrat', sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #fff;
-      color: #111;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+    }
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: flex-end;
+      background: rgba(17,17,17,0.8);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+    }
+    nav ul { list-style: none; display: flex; }
+    nav li { margin-left: 2rem; }
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
     }
     header {
-      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      height: 100vh;
+      background: url('hero-bg.jpg') center/cover no-repeat;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
     }
     .logo {
-      font-size: 2rem;
+      font-family: var(--font-serif);
+      font-size: 3rem;
       font-weight: 700;
       letter-spacing: 0.1em;
+      color: var(--text-light);
+      z-index: 1;
     }
     .tagline {
+      font-family: var(--font-serif);
       font-size: 1.2rem;
-      margin-top: 0.5rem;
-      color: #555;
-    }
-    section {
-      padding: 3rem 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #333;
-    }
-    .cta {
-      margin-top: 2rem;
-      text-align: center;
+      color: var(--accent-gold);
+      margin-top: 1rem;
+      z-index: 1;
     }
     .cta a {
-      background-color: #111;
-      color: #fff;
-      padding: 0.75rem 2rem;
-      text-decoration: none;
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 2.5rem;
+      background-color: var(--accent-gold);
+      color: var(--bg-dark);
+      font-family: var(--font-serif);
       font-size: 1rem;
+      text-decoration: none;
       border-radius: 0.25rem;
+      z-index: 1;
+      transition: transform 0.3s;
     }
-    footer {
+    .cta a:hover { transform: scale(1.05); }
+    section {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+    h2 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--accent-gold);
       text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #aaa;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+    .services p { text-align: center; }
+    .footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.8rem;
+      color: #555;
+      border-top: 1px solid #222;
     }
   </style>
 </head>
 <body>
-  <header>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
     <div class="logo">NOIR FIXERS</div>
     <div class="tagline">For When Failure is Not an Option</div>
+    <div class="cta"><a href="#contact">Engage Our Service</a></div>
   </header>
 
-  <section>
-    <h2>Signature Services</h2>
-    <p><strong>The Fix:</strong> Elite 24/7 event crisis response for clients who demand results under pressure.</p>
-    <p><strong>Noir Now:</strong> Last-minute luxury staffing and logistics support, executed with discretion and speed.</p>
-    <p><strong>The Vault:</strong> Monthly VIP retainer for HNWIs, celebrities, and PR teams needing trusted on-call support.</p>
+  <section id="services" class="services">
+    <h2>Our Signature Services</h2>
+    <p><strong>The Fix:</strong> Elite 24/7 crisis response for high-stakes events.</p>
+    <p><strong>Noir Now:</strong> Last-minute luxury staffing & logistics, executed flawlessly.</p>
+    <p><strong>The Vault:</strong> VIP monthly retainer for HNWIs and celebrities.</p>
   </section>
 
-  <section>
-    <h2>Who We Serve</h2>
-    <p>We partner with elite event producers, personal assistants, luxury brands, and high-stakes environments across London and beyond. From the unseen emergencies to the impossible turnarounds, we bring calm, control, and class.</p>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Luxury, discretion, and reliability—wherever you need us.</p>
+    <p>Same-day urgent needs? Call: <a href="tel:07481259386" style="color: var(--accent-gold)">07481259386</a></p>
+    <p>Email: <a href="mailto:info@noirfixers.co.uk" style="color: var(--accent-gold)">info@noirfixers.co.uk</a></p>
+    <p>London-based. Available nationwide & globally.</p>
   </section>
 
-  <section class="cta">
-    <h2>Get in Touch</h2>
-    <p>Discretion guaranteed. Speed ensured. Results delivered.</p>
-    <a href="mailto:info@noirfixers.co.uk">Email Us</a>
-  </section>
-
-  <footer>
+  <div class="footer">
     &copy; 2025 Noir Fixers. All rights reserved.
-  </footer>
+  </div>
 </body>
 </html>
