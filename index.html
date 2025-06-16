@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noir Fixers | Services</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noir Fixers | Elite Crisis Event Fixers</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -14,139 +14,159 @@
       --font-sans: 'Montserrat', sans-serif;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      background: var(--bg-deep-black);
+      background-color: var(--bg-deep-black);
       color: var(--text-light);
       font-family: var(--font-sans);
       line-height: 1.6;
     }
     nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: flex-end;
-      padding: 1rem 2rem;
-      background: var(--bg-deep-black);
+      background: rgba(18, 18, 18, 0.8);
+      backdrop-filter: blur(10px);
+      z-index: 100;
     }
+    nav ul { list-style: none; display: flex; }
+    nav li { margin-left: 2rem; }
     nav a {
       color: var(--text-light);
       text-decoration: none;
-      margin-left: 2rem;
       font-weight: 500;
+      font-size: 0.9rem;
     }
     nav a:hover {
       color: var(--accent-gold);
     }
     header {
-      padding: 4rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      background: var(--bg-deep-black);
+      height: 100vh;
+      background: url('pexels-bertellifotografia-16120259.jpg') center/cover no-repeat;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
     }
     .logo {
       font-family: var(--font-serif);
-      font-size: 4rem;
-      color: var(--accent-gold);
+      font-size: 3rem;
+      font-weight: 700;
       letter-spacing: 0.1em;
-      margin-bottom: 0.5rem;
+      color: var(--accent-gold);
+      z-index: 1;
     }
     .tagline {
       font-family: var(--font-serif);
       font-size: 1.2rem;
       color: var(--text-light);
-      opacity: 0.8;
-      margin-bottom: 2rem;
+      margin-top: 1rem;
+      z-index: 1;
     }
-    .section {
+    .cta a {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 2.5rem;
+      background-color: transparent;
+      color: var(--accent-gold);
+      border: 2px solid var(--accent-gold);
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 0.25rem;
+      transition: all 0.3s ease-in-out;
+      z-index: 1;
+    }
+    .cta a:hover {
+      background-color: var(--accent-gold);
+      color: var(--bg-deep-black);
+      transform: scale(1.05);
+    }
+    section {
       max-width: 800px;
       margin: 4rem auto;
       padding: 0 2rem;
-      background: var(--bg-deep-black);
     }
-    .section h2 {
+    h2 {
       font-family: var(--font-serif);
       font-size: 1.8rem;
+      margin-bottom: 1rem;
       color: var(--accent-gold);
       text-align: center;
-      margin-bottom: 1.5rem;
     }
-    .service-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: space-between;
+    p {
+      margin-bottom: 1rem;
+      text-align: center;
     }
-    .service-item {
-      flex: 1 1 200px;
-      background: var(--bg-deep-black);
-      padding: 1.5rem;
-      border: 1px solid var(--accent-gold);
-    }
-    .service-item h3 {
-      margin-bottom: 0.5rem;
-      color: var(--text-light);
-    }
-    .service-item ul {
-      list-style: disc;
-      padding-left: 1.2rem;
-    }
-    .section ul li {
-      margin-bottom: 0.5rem;
-    }
-    footer {
+    .footer {
       text-align: center;
       padding: 2rem 0;
-      background: var(--bg-deep-black);
-      color: var(--text-light);
       font-size: 0.8rem;
-      border-top: 1px solid var(--accent-gold);
+      color: #888;
+      border-top: 1px solid #222;
+    }
+    .socials a {
+      margin: 0 0.5rem;
+      color: var(--accent-gold);
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="index.html#contact">Contact</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="founding-offer.html">Founding Offer</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 
-  <header>
+  <header id="home">
     <div class="logo">NOIR FIXERS</div>
-    <div class="tagline">For When Failure Is Not an Option</div>
-    <h1 style="color: var(--text-light); margin-top: 1rem;">Our Services</h1>
-    <p style="color: var(--text-light);">Explore how Noir Fixers transforms chaos into calm.</p>
+    <div class="tagline">For When Failure is Not an Option</div>
+    <div class="cta"><a href="#contact">Engage Our Service</a></div>
   </header>
 
-  <section class="section">
-    <h2>Signature Services</h2>
-    <div class="service-list">
-      <div class="service-item">
-        <h3>The Fix</h3>
-        <ul>
-          <li>Elite 24/7 crisis response for high-stakes events</li>
-          <li>Same-day activation & full coordination</li>
-          <li>Discreet execution, even in chaos</li>
-        </ul>
-      </div>
-      <div class="service-item">
-        <h3>Noir Now</h3>
-        <ul>
-          <li>Luxury staffing at a moment's notice</li>
-          <li>Hostesses, security, chauffeurs, mixology</li>
-          <li>Premium logistics with a personal touch</li>
-        </ul>
-      </div>
-      <div class="service-item">
-        <h3>The Vault</h3>
-        <ul>
-          <li>VIP monthly retainer for HNWIs</li>
-          <li>24/7 personal contact & rapid response</li>
-          <li>Bespoke, white-glove lifestyle support</li>
-        </ul>
-      </div>
-    </div>
+  <section id="services" class="services">
+    <h2>Our Signature Services</h2>
+    <p><strong>The Fix:</strong> Elite 24/7 crisis response for high-stakes events.</p>
+    <p><strong>Noir Now:</strong> Last-minute luxury staffing & logistics, executed flawlessly.</p>
+    <p><strong>The Vault:</strong> VIP monthly retainer for HNWIs and celebrities.</p>
   </section>
 
-  <footer>
-    &copy; 2025 Noir Fixers. All rights reserved.
-  </footer>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Luxury, discretion, and reliability—wherever you need us.</p>
+    <p><strong>Call:</strong> <a href="tel:07481259386" style="color: var(--accent-gold)">07481 259 386</a></p>
+    <p><strong>Email:</strong> <a href="mailto:info@noirfixers.co.uk" style="color: var(--accent-gold)">info@noirfixers.co.uk</a></p>
+    <p><strong>Social:</strong> 
+      <a href="https://www.instagram.com/noirfixers/" target="_blank" style="color: var(--accent-gold)">Instagram</a> |
+      <a href="https://www.tiktok.com/@noirfixers" target="_blank" style="color: var(--accent-gold)">TikTok</a>
+    </p>
+    <p>Based in London. Serving UK & Global Clients.</p>
+  </section>
+
+  <div class="footer">
+    &copy; 2025 Noir Fixers. All rights reserved.<br>
+    <div class="socials">
+      <a href="https://www.tiktok.com/@noirfixers" target="_blank">TikTok</a> |
+      <a href="https://www.instagram.com/noirfixers/" target="_blank">Instagram</a>
+    </div>
+  </div>
 </body>
 </html>
+
 
