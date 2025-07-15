@@ -3,47 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noir Fixers | Founding Offer</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #121212;
-      color: #f5f5f5;
-      font-family: 'Montserrat', sans-serif;
-      line-height: 1.6;
-    }
-    h1, h2 {
-      text-align: center;
-      color: #c8a45a;
-      margin-top: 2rem;
-    }
-    p {
-      max-width: 800px;
-      margin: 1rem auto;
-      text-align: center;
-      font-size: 1.05rem;
-    }
-    iframe {
-      width: 100%;
-      height: 100vh;
-      border: none;
-    }
-  </style>
+  <title>Noir Fixers – Luxury Fixer Agency</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
-<body>
-  <iframe src="https://73fc-info.systeme.io/noirfixers" title="Noir Fixers Founding Offer"></iframe>
+<body class="antialiased text-gray-800 bg-gray-50">
+  <!-- Hero -->
+  <header class="bg-[url('https://images.pexels.com/photos/3785709/pexels-photo-3785709.jpeg')] bg-cover bg-center text-white h-screen relative">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+    <div class="relative z-10 flex items-center justify-center h-full px-8">
+      <div class="max-w-3xl text-center space-y-6">
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">Fixing Life’s Transitions<br />Between the <span class="text-yellow-400">UK</span> &amp; the <span class="text-yellow-400">Gulf</span></h1>
+        <p class="text-lg md:text-2xl">Luxury Relocations • Bespoke Events • Crisis Logistics</p>
+        <a href="#contact" class="inline-block mt-4 px-8 py-3 bg-yellow-400 text-black font-semibold rounded-full shadow-lg hover:bg-yellow-300 transition">Book a Discovery Call</a>
+      </div>
+    </div>
+  </header>
 
-  <section id="about">
-    <h1>About Noir Fixers</h1>
-    <p><strong>Noir Fixers</strong> exists for the moments when failure is not an option.</p>
-    <p>Born out of real client demand and a deep understanding of pressure-driven environments, we specialise in discreet, elite-level event fixing, crisis management, and urgent lifestyle support.</p>
-    <p>Whether it’s a last-minute event rescue, a high-profile funeral, or a VIP needing solutions within the hour — we are the team that makes it happen, flawlessly.</p>
-    <p>We are based in London, serving nationwide and global clients who demand excellence, precision, and confidentiality.</p>
-
-    <h2>Our Mission</h2>
-    <p><em>Our mission is simple:</em><br>
-    To restore peace in moments of chaos by delivering exceptional, confidential support to individuals and organisations who cannot afford failure.</p>
-    <p>Through faith, precision, and a deep commitment to service, Noir Fixers provides solutions where others see obstacles. We step in so our clients can step up.</p>
+  <!-- Who We Are -->
+  <section id="about" class="py-16 px-6 md:px-16 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Who We Are</h2>
+      <p class="text-lg leading-relaxed">Noir Fixers is a luxury lifestyle & logistics agency acting as the strategic bridge between high‑pressure clients and the complex services they need across continents. We coordinate, curate, and deliver <strong>peace of mind</strong>—serving London, the wider UK, and the Gulf (Dubai, Abu Dhabi, Ras Al Khaimah).</p>
+    </div>
   </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 bg-gray-100 px-6 md:px-16">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">What We Do</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Relocation -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">VIP Relocation Fixer</h3>
+          <ul class="space-y-2 text-sm leading-relaxed list-disc list-inside">
+            <li>Property & neighbourhood sourcing</li>
+            <li>School / nursery placement</li>
+            <li>Utilities, banking & admin setup</li>
+            <li>Staffing & concierge introductions</li>
+            <li>Move‑day oversight & settling‑in support</li>
+          </ul>
+          <p class="mt-4 font-medium">Starting from £1,500</p>
+        </div>
+        <!-- Events -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Luxury Event Execution</h3>
+          <ul class="space-y-2 text-sm leading-relaxed list-disc list-inside">
+            <li>Concept & strategy session</li>
+            <li>Venue & vendor curation</li>
+            <li>Guest concierge & VIP gifting</li>
+            <li>On‑the‑day production team</li>
+            <li>Post‑event wrap & thank‑you touchpoints</li>
+          </ul>
+          <p class="mt-4 font-medium">Starting from £1,000</p>
+        </div>
+        <!-- Crisis -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg">
+          <h3 class="text-2xl font-semibold mb-4">Crisis Logistics Fixer</h3>
+          <ul class="space-y-2 text-sm leading-relaxed list-disc list-inside">
+            <li>Rapid 2‑hour action plan</li>
+            <li>Emergency travel & accommodation</li>
+            <li>On‑ground errand execution</li>
+            <li>Vendor & professional liaison</li>
+            <li>72‑hour personal assistant cover</li>
+          </ul>
+          <p class="mt-4 font-medium">Starting from £500</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Statement -->
+  <section class="py-16 px-6 md:px-16 bg-white">
+    <div class="max-w-4xl mx-auto text-center space-y-6">
+      <h2 class="text-3xl font-bold">Our Promise</h2>
+      <p class="text-lg">One calm point of contact. Culturally‑aware expertise. Total discretion. We manage the mission — you enjoy the results.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials (placeholder) -->
+  <section id="testimonials" class="py-16 bg-gray-100 px-6 md:px-16">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Client Experiences</h2>
+      <p class="italic text-gray-600">"Noir Fixers moved our family from Dubai to Surrey in two weeks — every detail handled with grace and confidentiality." – M. Al Nuaimi</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-black text-white px-6 md:px-16">
+    <div class="max-w-4xl mx-auto text-center space-y-6">
+      <h2 class="text-3xl font-bold">Ready for Peace of Mind?</h2>
+      <p class="text-lg">Book a complimentary 20‑minute discovery call to discuss your move, event, or crisis support.</p>
+      <a href="mailto:info@noirfixers.co.uk" class="inline-block px-8 py-3 bg-yellow-400 text-black font-semibold rounded-full shadow-lg hover:bg-yellow-300 transition">Email Us: info@noirfixers.co.uk</a>
+    </div>
+  </section>
+
+  <footer class="py-6 text-center text-xs text-gray-500 bg-gray-900 text-white">
+    © 2025 Noir Fixers. All rights reserved. | London • Dubai • Ras Al Khaimah
+  </footer>
 </body>
 </html>
