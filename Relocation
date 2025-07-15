@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noir Fixers | Founding Offer</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #121212;
+      color: #f5f5f5;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #c8a45a;
+      margin-top: 2rem;
+    }
+    p {
+      max-width: 800px;
+      margin: 1rem auto;
+      text-align: center;
+      font-size: 1.05rem;
+    }
+    h3 {
+      color: #facc15;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 2rem;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #facc15;
+      color: #121212;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .modal-content {
+      background-color: #1e1e1e;
+      margin: 5% auto;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 800px;
+    }
+    .close {
+      color: #facc15;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <section id="about">
+    <h1>About Noir Fixers</h1>
+    <p><strong>Noir Fixers</strong> exists for the moments when failure is not an option.</p>
+    <p>Born out of real client demand and a deep understanding of pressure-driven environments, we specialise in discreet, elite-level event fixing, crisis management, and urgent lifestyle support.</p>
+    <p>Whether it’s a last-minute event rescue, a high-profile funeral, or a VIP needing solutions within the hour — we are the team that makes it happen, flawlessly.</p>
+    <p>We are based in London, serving nationwide and global clients who demand excellence, precision, and confidentiality.</p>
+
+    <h2>Our Mission</h2>
+    <p><em>Our mission is simple:</em><br>
+    To restore peace in moments of chaos by delivering exceptional, confidential support to individuals and organisations who cannot afford failure.</p>
+    <p>Through faith, precision, and a deep commitment to service, Noir Fixers provides solutions where others see obstacles. We step in so our clients can step up.</p>
+
+    <p><a id="openModal" class="button">View Our Services</a></p>
+  </section>
+
+  <!-- Modal -->
+  <div id="servicesModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2>Our Services</h2>
+
+      <div class="section">
+        <h3>VIP Relocation Fixer</h3>
+        <p>For high-net-worth individuals, entrepreneurs, and families relocating to or from the UK and the Gulf.</p>
+        <ul>
+          <li>Property & neighbourhood sourcing</li>
+          <li>School/nursery placement</li>
+          <li>Utility, finance & admin setup</li>
+          <li>Trusted concierge & staffing referrals</li>
+          <li>End-to-end relocation oversight</li>
+        </ul>
+        <p><strong>Starting from £1,500</strong></p>
+        <p><a href="mailto:info@noirfixers.co.uk" class="button">Enquire Now</a></p>
+      </div>
+
+      <div class="section">
+        <h3>Luxury Event Execution</h3>
+        <p>For entrepreneurs, wellness brands, and private clients planning elite gatherings.</p>
+        <ul>
+          <li>Concept & strategy sessions</li>
+          <li>Venue & vendor curation</li>
+          <li>Guest concierge & gifting</li>
+          <li>On-the-day logistics management</li>
+          <li>Post-event wrap & VIP follow-up</li>
+        </ul>
+        <p><strong>Starting from £1,000</strong></p>
+        <p><a href="mailto:info@noirfixers.co.uk" class="button">Enquire Now</a></p>
+      </div>
+
+      <div class="section">
+        <h3>Crisis Logistics / Personal Fixer</h3>
+        <p>For clients dealing with urgent life transitions, emergencies, or discreet support needs.</p>
+        <ul>
+          <li>72-hour personal support window</li>
+          <li>Emergency bookings & accommodation</li>
+          <li>Vendor/errand coordination & execution</li>
+          <li>Private and sensitive case management</li>
+        </ul>
+        <p><strong>Starting from £500</strong></p>
+        <p><a href="mailto:info@noirfixers.co.uk" class="button">Enquire Now</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("servicesModal");
+    const openModal = document.getElementById("openModal");
+    const closeModal = document.getElementById("closeModal");
+
+    openModal.onclick = () => {
+      modal.style.display = "block";
+    };
+    closeModal.onclick = () => {
+      modal.style.display = "none";
+    };
+    window.onclick = (event) => {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
